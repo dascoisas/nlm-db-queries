@@ -18,8 +18,8 @@ async function main() {
             console.log('Chaves do objeto:', Object.keys(row));
 
             // Acesso com trim para remover espaços
-            const serialNumber = row['serialNumber'] ? row['serialNumber'].trim() : null; 
-            console.log('Serial Number:', serialNumber); 
+            const serialNumber = row['serialNumber'] ? row['serialNumber'].trim() : null;
+            console.log('Serial Number:', serialNumber);
 
             if (serialNumber) {
                 serialNumbers.add(serialNumber);
