@@ -43,7 +43,8 @@ async function checkSerialNumbers(serialNumbers) {
         const collection = db.collection(collectionName);
 
         const existing = await collection
-            .find({ serialNumber: { $in: serialNumbers }, tenantId: '8148875b-eff4-4fac-bd6c-ed28e4478ab7' })
+            // .find({ serialNumber: { $in: serialNumbers }, tenantId: '8148875b-eff4-4fac-bd6c-ed28e4478ab7' })
+            .find({ serialNumber: { $in: serialNumbers } })
             .project({ serialNumber: 1 })
             .toArray();
 
